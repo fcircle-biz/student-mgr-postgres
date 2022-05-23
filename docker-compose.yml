@@ -1,14 +1,14 @@
 version: '3'
 services:
-  postgresql:
+  database:
     image: postgres:10
-    container_name: postgresql
-    hostname: postgresql-server
+    container_name: database
+    hostname: database
     ports:
       - 5432:5432
     volumes:
       - db-data:/var/lib/postgresql/data
-      - ./postgres:/docker-entrypoint-initdb.d
+      - ./database:/docker-entrypoint-initdb.d
     environment:
       - TZ=Asia/Tokyo
       - POSTGRES_USER=postgres
@@ -30,7 +30,7 @@ services:
       - PGADMIN_DEFAULT_EMAIL=admin@testdomain.com
       - PGADMIN_DEFAULT_PASSWORD=postgres
     depends_on:
-      - postgresql
+      - database
     restart: always
 
 volumes:

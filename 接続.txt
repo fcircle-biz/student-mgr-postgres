@@ -1,0 +1,20 @@
+
+> docker ps
+> docker inspect 85b2b011c03f
+
+
+"postgresql_default": {
+"IPAddress": "172.18.0.2",
+
+
+
+接続先：172.18.0.2
+
+pgadmin
+
+localhost:8000
+
+user:admin@testdomain.com
+pass:postgres
+
+
