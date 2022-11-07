@@ -23,7 +23,7 @@ CREATE TABLE m_student
      student_id integer NOT NULL
    , student_name varchar(30) NOT NULL
    , gender_cd char(1) NOT NULL
-   , pref_id integer
+   , pref_cd varchar(2)
    , age integer
    , birthday date
    , primary key(student_id)
@@ -56,9 +56,9 @@ CREATE TABLE m_gender
 -- 都道府県マスタ
 CREATE TABLE m_pref
 (
-     pref_id integer
+     pref_cd varchar(2)
    , pref_name varchar(20) NOT NULL
-   , primary key(pref_id)
+   , primary key(pref_cd)
 );
 
 -- ========================================================
@@ -87,7 +87,7 @@ INNER JOIN t_receive_subject r
  LEFT JOIN m_gender g
         ON s.gender_cd = g.gender_cd
  LEFT JOIN m_pref p
-        ON s.pref_id = p.pref_id
+        ON s.pref_cd = p.pref_cd
  LEFT JOIN m_subject sbj
         ON r.subject_cd = sbj.subject_cd;
 
