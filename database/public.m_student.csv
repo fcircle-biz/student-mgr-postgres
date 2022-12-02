@@ -1,2 +1,3 @@
-﻿"student_id","student_name","gender_cd","pref_id","age","birthday"
-1,"山田　太郎","M",01,14,2005/07/012,"山本　花子","F",02,15,2004/08/02
+﻿"student_id","student_name","gender_cd","pref_cd","age","birthday"
+1,"山田　太郎","M","01",14,2005/07/012
+2,"山本　花子","F","02",15,2004/08/02
